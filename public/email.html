@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <meta name="supported-color-schemes" content="light dark">
     <title>Service Excellence Feedback | Wizard Wash</title>
     <!--[if mso]>
     <noscript>
@@ -16,6 +18,11 @@
     </noscript>
     <![endif]-->
     <style>
+        :root {
+            color-scheme: light dark;
+            supported-color-schemes: light dark;
+        }
+
         body {
             margin: 0;
             padding: 0;
@@ -41,8 +48,8 @@
         .wrapper {
             width: 100%;
             table-layout: fixed;
-            background-color: #f4f7fa;
-            padding-bottom: 40px;
+            background-color: #f1f5f9;
+            padding: 0;
         }
 
         .main-card {
@@ -50,13 +57,12 @@
             margin: 0 auto;
             width: 100%;
             max-width: 600px;
-            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(45, 22, 84, 0.05);
         }
 
         .header {
-            background: linear-gradient(135deg, #1a0a2e 0%, #2d1654 100%);
+            background-color: #1a0a2e;
+            background-image: linear-gradient(135deg, #1a0a2e 0%, #2d1654 100%);
             padding: 40px 20px;
             text-align: center;
         }
@@ -77,6 +83,7 @@
             padding: 48px 40px;
             text-align: center;
             background-color: #1a0a2e;
+            background-image: linear-gradient(to bottom, #1a0a2e, #1a0a2e);
             color: #ffffff;
         }
 
@@ -128,7 +135,41 @@
 
         .accent-bar {
             height: 4px;
-            background: linear-gradient(90deg, #00e68a, #00cc99);
+            background-color: #00e68a;
+            background-image: linear-gradient(90deg, #00e68a, #00cc99);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body, .wrapper {
+                background-color: #121212 !important;
+            }
+            .main-card, .content {
+                background-color: #1e1e1e !important;
+            }
+            h2 {
+                color: #ffffff !important;
+            }
+            p {
+                color: #e2e8f0 !important;
+            }
+            .rating-section {
+                background-color: #252525 !important;
+                border-color: #333333 !important;
+            }
+            .emoji-circle {
+                background-color: #2d2d2d !important;
+                border-color: #444444 !important;
+            }
+            .btn-rating div {
+                color: #ffffff !important;
+            }
+            .rating-section p {
+                color: #a0aec0 !important;
+            }
+            .referral-box {
+                background-color: #252525 !important;
+                border-color: #333333 !important;
+            }
         }
     </style>
 </head>
@@ -137,21 +178,13 @@
     <div class="wrapper">
         <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
             <tr>
-                <td align="center" style="padding: 40px 10px 20px;">
-                    <!-- Logo Area -->
-                    <table role="presentation" width="100%" style="max-width: 600px;">
-                        <tr>
-                            <td align="center" style="padding-bottom: 24px;">
-                                <img src="https://www.wizardwashva.com/images/Updated%20Logo%20.png" alt="Wizard Wash"
-                                    width="160" style="display: block;">
-                            </td>
-                        </tr>
-                    </table>
-
+                <td align="center" style="padding: 0;">
                     <div class="main-card">
                         <!-- Premium Header -->
-                        <div class="header">
-                            <h1>Service Summary Report</h1>
+                        <div class="header" style="padding: 48px 20px; background-color: #1a0a2e; background-image: linear-gradient(135deg, #1a0a2e 0%, #2d1654 100%);">
+                            <img src="https://www.wizardwashva.com/images/Updated%20Logo%20.png" alt="Wizard Wash"
+                                width="180" style="display: block; margin: 0 auto 32px;">
+                            <h1 style="color: #ffffff;">Service Summary Report</h1>
                         </div>
                         <div class="accent-bar"></div>
 
@@ -226,9 +259,9 @@
                         </div>
 
                         <!-- Professional Info Section -->
-                        <div class="content" style="padding-top: 32px; background-color: #ffffff;">
-                            <table role="presentation" width="100%"
-                                style="background-color: #f8fafc; border-radius: 8px; border-left: 4px solid #2d1654;">
+                        <div class="content" style="padding-top: 32px;">
+                            <table role="presentation" width="100%" class="referral-box"
+                                style="background-color: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0;">
                                 <tr>
                                     <td style="padding: 20px;">
                                         <p style="margin: 0 0 16px; font-size: 14px; color: #2d3748;"><strong>The Wizard
@@ -238,19 +271,17 @@
                                             with a neighbor and they'll receive <strong>10% off</strong> their first
                                             service when they mention your name!
                                         </p>
-                                        <a href="https://www.wizardwashva.com/quote"
-                                            style="display: inline-block; background-color: #2d1654; color: #ffffff; padding: 12px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 13px;">Refer
-                                            a Neighbor & Save 10%</a>
+                                        <a href="https://wizardwashva.com/refer-a-friend"
+                                            style="display: inline-block; background-color: #2d1654; background-image: linear-gradient(to bottom, #2d1654, #2d1654); color: #ffffff; padding: 12px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 13px;">Refer
+                                            a Friend</a>
                                     </td>
                                 </tr>
                             </table>
                         </div>
 
                         <!-- Company Contact -->
-                        <div class="footer">
-                            <p style="font-weight: 700; color: #ffffff; margin-bottom: 8px;">Wizard Wash LLC</p>
-                            <p style="font-size: 14px; color: #a5b4fc; margin-bottom: 24px;">Mid-Atlantic Premium
-                                Exterior Maintenance</p>
+                        <div class="footer" style="background-color: #1a0a2e; background-image: linear-gradient(to bottom, #1a0a2e, #1a0a2e); color: #ffffff;">
+                            <p style="font-weight: 700; color: #ffffff; margin-bottom: 24px;">Wizard Wash LLC</p>
 
                             <table role="presentation" align="center" cellpadding="0" cellspacing="0">
                                 <tr>
@@ -268,23 +299,24 @@
                                             style="color: #ffffff; text-decoration: none; font-weight: 600; font-size: 14px;">omar@wizardwashva.com</a>
                                     </td>
                                 </tr>
-                                <table role="presentation" align="center" cellpadding="0" cellspacing="0"
-                                    style="margin-top: 24px;">
-                                    <tr>
-                                        <td style="padding: 0 12px;">
-                                            <a href="https://www.facebook.com/61569501320781/"
-                                                style="text-decoration: none;"><img
-                                                    src="https://img.icons8.com/ios-glyphs/24/ffffff/facebook-new.png"
-                                                    alt="FB" width="20"></a>
-                                        </td>
-                                        <td style="padding: 0 12px;">
-                                            <a href="https://www.instagram.com/wizardwashva/?hl=en"
-                                                style="text-decoration: none;"><img
-                                                    src="https://img.icons8.com/ios-glyphs/24/ffffff/instagram-new.png"
-                                                    alt="IG" width="20"></a>
-                                        </td>
-                                    </tr>
-                                </table>
+                            </table>
+                            <table role="presentation" align="center" cellpadding="0" cellspacing="0"
+                                style="margin-top: 24px;">
+                                <tr>
+                                    <td style="padding: 0 12px;">
+                                        <a href="https://www.facebook.com/61569501320781/"
+                                            style="text-decoration: none;"><img
+                                                src="https://img.icons8.com/ios-glyphs/24/ffffff/facebook-new.png"
+                                                alt="FB" width="20"></a>
+                                    </td>
+                                    <td style="padding: 0 12px;">
+                                        <a href="https://www.instagram.com/wizardwashva/?hl=en"
+                                            style="text-decoration: none;"><img
+                                                src="https://img.icons8.com/ios-glyphs/24/ffffff/instagram-new.png"
+                                                alt="IG" width="20"></a>
+                                    </td>
+                                </tr>
+                            </table>
                         </div>
                     </div>
 
