@@ -50,7 +50,7 @@ Respond with ONLY the review text. No quotes, no preamble, nothing else.`;
         "anthropic-version": "2023-06-01",
       },
       body: JSON.stringify({
-        model: "claude-sonnet-4-20250514",
+        model: "claude-sonnet-4-6",
         max_tokens: 300,
         messages: [{ role: "user", content: prompt }],
       }),
