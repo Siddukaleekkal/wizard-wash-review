@@ -19,7 +19,7 @@ const CONFIG = {
 };
 
 const RATINGS = [
-  { emoji: "😍", label: "Amazing", value: 5 },
+  { emoji: "🤩", label: "Amazing", value: 5 },
   { emoji: "😊", label: "Great", value: 4 },
   { emoji: "🙂", label: "Good", value: 3 },
 ];
@@ -68,7 +68,9 @@ export default function ReviewGenerator() {
     const params = new URLSearchParams(window.location.search);
     const r = parseInt(params.get("rating"));
     const name = params.get("name");
-    if (name) setCustomerName(decodeURIComponent(name));
+    if (name && !name.includes("${") && !name.includes("trigger")) {
+      setCustomerName(name);
+    }
     if ([3, 4, 5].includes(r)) {
       setSelectedRating(r);
       setStep("details");
